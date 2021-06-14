@@ -14,11 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 /* HOME */
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', 'PageController@index')->name('home');
 
 /* COMICS */
-Route::get('/comics', function () {
-    return view('comics');
-})->name('comics');
+Route::resource('comics', 'ComicController');

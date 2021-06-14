@@ -13,7 +13,7 @@
 
         @include('partials.header')
         
-        <main>
+        <main class='pt-5 mt-3'>
             @yield('content')
         </main>
         

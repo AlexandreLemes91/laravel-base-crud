@@ -6,10 +6,41 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-image: url("https://www.tomshw.it/images/images/2019/02/dc-comics-19749.jpg");
 }
 
 main {
   flex-grow: 1;
+  position: relative;
+  color: white;
+}
+
+main::after {
+  z-index: -1;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*******************************************
+CARD
+*******************************************/
+
+.comic-card {
+  width: calc(100% / 4 - 20px);
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*******************************************
